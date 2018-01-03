@@ -1,3 +1,4 @@
+/* @flow */
 import express from "express";
 import morgan from "morgan";
 import chalk from "chalk";
