@@ -2,6 +2,10 @@ const request = require("supertest");
 const app = require("../index.js");
 
 describe("index route", () => {
+  afterAll(() => {
+    app.server.close();
+  });
+
   it("should respond with a 200 with no query parameters", () => {
     return request(app)
       .get("/")

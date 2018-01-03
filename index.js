@@ -21,6 +21,6 @@ app.get("/", (request, response) => {
   response.status(200).json(responseObject);
 });
 
-app.listen(9090, () => console.log(chalk.red("Example app listening on port 9090!")));
+app.server = app.listen(9090, () => console.log(chalk.red("Example app listening on port 9090!")));
 
 module.exports = app;
