@@ -8,6 +8,10 @@ var _morgan = require("morgan");
 
 var _morgan2 = _interopRequireDefault(_morgan);
 
+var _chalk = require("chalk");
+
+var _chalk2 = _interopRequireDefault(_chalk);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
@@ -30,5 +34,7 @@ app.get("/", function (request, response) {
 });
 
 app.listen(9090, function () {
-  return console.log("Example app listening on port 9090!");
+  return console.log(_chalk2.default.red("Example app listening on port 9090!"));
 });
+
+module.exports = app;
